@@ -47,3 +47,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Templating
+gem 'slim-rails'
+
+# communication with other services
+gem 'activeresource'
+gem 'rest-client'
+
+# Authorization
+gem 'enumerize', '~> 2.3'
+gem 'jwt', '~> 2.2'

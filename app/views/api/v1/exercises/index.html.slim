@@ -1,0 +1,35 @@
+h1 Listing api_v1_exercises
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Deadline
+      th Visible date
+      th Do plagiarism check
+      th Exercise test
+      th Exercise hidden test
+      th Exercise stub
+      th
+      th
+      th
+
+  tbody
+    - @api_v1_exercises.each do |api_v1_exercise|
+      tr
+        td = api_v1_exercise.title
+        td = api_v1_exercise.description
+        td = api_v1_exercise.deadline
+        td = api_v1_exercise.visible_date
+        td = api_v1_exercise.do_plagiarism_check
+        td = api_v1_exercise.exercise_test
+        td = api_v1_exercise.exercise_hidden_test
+        td = api_v1_exercise.exercise_stub
+        td = link_to 'Show', api_v1_exercise
+        td = link_to 'Edit', edit_api_v1_exercise_path(api_v1_exercise)
+        td = link_to 'Destroy', api_v1_exercise, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Exercise', new_api_v1_exercise_path

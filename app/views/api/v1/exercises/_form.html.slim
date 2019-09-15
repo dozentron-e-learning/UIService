@@ -1,0 +1,33 @@
+= form_with model: @api_v1_exercise do |f|
+  / - if @api_v1_exercise.errors.any?
+  #error_explanation
+    h2 = "#{pluralize(@api_v1_exercise.errors.count, "error")} prohibited this api_v1_exercise from being saved:"
+    ul
+      - @api_v1_exercise.errors.full_messages.each do |message|
+        li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :deadline
+    = f.datetime_select :deadline
+  .field
+    = f.label :visible_date
+    = f.datetime_select :visible_date
+  .field
+    = f.label :do_plagiarism_check
+    = f.check_box :do_plagiarism_check
+  .field
+    = f.label :exercise_test
+    = f.file_field :exercise_test
+  .field
+    = f.label :exercise_hidden_test
+    = f.file_field :exercise_hidden_test
+  .field
+    = f.label :exercise_stub
+    = f.file_field :exercise_stub
+  .actions = f.submit

@@ -28,5 +28,9 @@ module UIService
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.service_urls = config_for 'service_urls'
+    config.jwt = config_for 'jwt'
+    config.service_urls = config_for 'service_urls'
   end
 end

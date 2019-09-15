@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @api_v1_exercise.title
+p
+  strong Description:
+  = @api_v1_exercise.description
+p
+  strong Deadline:
+  = @api_v1_exercise.deadline
+p
+  strong Visible date:
+  = @api_v1_exercise.visible_date
+p
+  strong Do plagiarism check:
+  = @api_v1_exercise.do_plagiarism_check
+p
+  strong Exercise test:
+  = @api_v1_exercise.exercise_test
+p
+  strong Exercise hidden test:
+  = @api_v1_exercise.exercise_hidden_test
+p
+  strong Exercise stub:
+  = @api_v1_exercise.exercise_stub
+
+=> link_to 'Edit', edit_api_v1_exercise_path(@api_v1_exercise)
+'|
+=< link_to 'Back', api_v1_exercises_path
